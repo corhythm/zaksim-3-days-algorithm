@@ -31,4 +31,5 @@ fun findNumberOfPrime(number: Int): Int {
     for (i in number..(number * 2)) {
 
     }
+    return 1;
 }

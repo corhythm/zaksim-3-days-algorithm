@@ -1,0 +1,16 @@
+.gradle/
+.idea/
+build/
+#gradle/
+test/
+out/
+
+src/test/resources/
+build.gradle
+#gradlew
+#gradlew.bat
+settings.gradle
+
+#build.gradle.kts
+#gradle.properties
+#settings.gradle.kts

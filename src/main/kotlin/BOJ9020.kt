@@ -29,10 +29,15 @@ class BOJ9020 {
     fun run() {
 
         with(Scanner(System.`in`)) {
-            val numberOfCandidate = nextInt()
+            val numberOfCandidate = nextInt() // 몇 개 출력할 건지
+            val inputNums = arrayListOf<Int>()
             for (i in 0 until numberOfCandidate) {
                 val value = nextInt()
-                val (frontPrime, backPrime) = findGoldbachConjecture(value)
+                inputNums.add(value)
+            }
+
+            inputNums.forEach {
+                val (frontPrime, backPrime) = findGoldbachConjecture(it)
                 println("$frontPrime $backPrime")
             }
         }
@@ -54,8 +59,6 @@ class BOJ9020 {
 
 }
 
+fun main() =BOJ9020().run()
 
-fun main() {
-    BOJ9020().run()
-}
 

@@ -8,7 +8,7 @@ import kotlin.math.sqrt
 class BOJ9020 {
 
     // 10001개를 선언하는 이유는 1 ~ 10000 인덱스를 값처럼 사용
-    private val primes = BooleanArray(10001) { true }
+    private val primes = BooleanArray(10000.plus(1)) { true }
 
     init {
         // Sieve of Eratosthenes
@@ -26,23 +26,15 @@ class BOJ9020 {
         }
     }
 
-    fun run() {
+    fun run() = with(Scanner(System.`in`)) {
+        val numberOfCandidate = nextInt() // 몇 개 출력할 건지
 
-        with(Scanner(System.`in`)) {
-            val numberOfCandidate = nextInt() // 몇 개 출력할 건지
-            val inputNums = arrayListOf<Int>()
-            for (i in 0 until numberOfCandidate) {
-                val value = nextInt()
-                inputNums.add(value)
-            }
-
-            inputNums.forEach {
-                val (frontPrime, backPrime) = findGoldbachConjecture(it)
-                println("$frontPrime $backPrime")
-            }
+        for (i in 0 until numberOfCandidate) {
+            val value = nextInt()
+            val (frontPrime, backPrime) = findGoldbachConjecture(value)
+            println("$frontPrime $backPrime")
         }
     }
-
 
     private fun findGoldbachConjecture(value: Int): Pair<Int, Int> {
         var firstPartition = value / 2
@@ -56,9 +48,7 @@ class BOJ9020 {
             secondPartition++
         }
     }
-
 }
 
-fun main() =BOJ9020().run()
-
+fun main() = BOJ9020().run()
 

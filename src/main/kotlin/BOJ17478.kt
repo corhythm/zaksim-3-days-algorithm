@@ -1,9 +1,9 @@
 import java.util.Scanner
 
-/**
- * https://www.acmicpc.net/problem/17478
- * 재귀함수가 뭔가요?
- */
+
+// https://www.acmicpc.net/problem/17478
+// 재귀함수가 뭔가요? (Silver 5, Success)
+
 class BOJ17478 {
 
     private var dashCount = 0

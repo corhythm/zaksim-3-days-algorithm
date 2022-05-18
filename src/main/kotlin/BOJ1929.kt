@@ -1,6 +1,8 @@
 import java.util.Scanner
 import kotlin.math.sqrt
 
+// https://www.acmicpc.net/problem/1929
+// 소수 구하기 (Silver 3, Success)
 class BOJ1929 {
 
     private val primes = BooleanArray(1000000.plus(1)) { true }

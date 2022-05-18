@@ -2,11 +2,10 @@ import java.util.*
 import kotlin.math.sign
 import kotlin.math.sqrt
 
-/**
- * Bertrand's postulate
- * #Sieve of Eratosthenes
- * https://www.acmicpc.net/problem/4948
- */
+
+// https://www.acmicpc.net/problem/4948
+// 베르트랑 공준 (Silver 2, Success)
+
 class Boj4948 {
 
     // 1 ~ 123456

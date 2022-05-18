@@ -1,5 +1,7 @@
 import java.util.Scanner
 
+// https://www.acmicpc.net/problem/10872
+// 팩토리얼 (Bronze 3, Success)
 class BOJ10872 {
 
     fun run() = with(Scanner(System.`in`)) {

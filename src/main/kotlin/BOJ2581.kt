@@ -2,7 +2,7 @@ import java.util.Scanner
 import kotlin.math.sqrt
 
 // https://www.acmicpc.net/problem/2581
-// 소수
+// 소수 (Silver 5, Success)
 class BOJ2581 {
 
     private val primes = BooleanArray(10000.plus(1)) { true }

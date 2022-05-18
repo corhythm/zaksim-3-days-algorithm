@@ -1,7 +1,7 @@
 import java.util.Scanner
 
 // https://www.acmicpc.net/problem/10870
-// 피보나치 수 5
+// 피보나치 수 5 (Bronze 2, Success)
 class BOJ10870 {
 
     fun run() = with(Scanner(System.`in`)) {

@@ -1,10 +1,10 @@
 import java.util.*
 import kotlin.math.sqrt
 
-/*
- * Goldbach's conjecture
- * https://www.acmicpc.net/problem/9020
- */
+
+// https://www.acmicpc.net/problem/9020
+// 골드바흐의 추측 (Silver 1, Success)
+
 class BOJ9020 {
 
     // 10001개를 선언하는 이유는 1 ~ 10000 인덱스를 값처럼 사용

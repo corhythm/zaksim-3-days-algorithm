@@ -1,5 +1,4 @@
 import java.util.*
-import kotlin.collections.ArrayList
 
 // https://www.acmicpc.net/problem/1181
 // 단어 정렬(Silver 5, Success)
@@ -19,10 +18,17 @@ class BOJ1181 {
             rawWords.add(next())
         }
 
+        /**
+         * 스트링을 비교할 때는 기본적으로 ascii 코드 값으로 비교한다.
+         * 만약 길이가 같다면(e.g. "a" > "b") 해당 문자의 ascii 코드 값을 비교하고
+         * 길이가 다르다면 맨 처음 문자의 ascii 코드 값으로 비교하되, 맨 처음 문자가 같은 문자이면
+         * 다음 문자로 비교해서 비교 우위를 가린다. 즉, 길이가 1이든, 그보다 크든, 가장 앞에 있는 문자만 비교해서
+         * 우선 순위를 가린다. (compareTo도 내부적으로 그렇게 동작하고 단순히 "a" > "bcd" 도 마찬가지이다.
+         */
         val words = rawWords.toTypedArray()
         words.sortWith { s1, s2 ->
             if (s1.length == s2.length) {
-                s1.compareTo(s2)
+                s1.compareTo(s2) // s1의 ascii 코드 값이 더 크면 (+), s2의 ascii 코드 값이 더 크면 (-)
             } else {
                 s1.length - s2.length
             }
@@ -35,7 +41,6 @@ class BOJ1181 {
 }
 
 
-fun main() {
-    BOJ1181().run()
-}
+fun main() = BOJ1181().run()
+
 

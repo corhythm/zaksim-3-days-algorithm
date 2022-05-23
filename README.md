@@ -1,6 +1,8 @@
 # zaksim-3-days-algorithm
     zaksim-3-days-algorithm
      Hello Algorithm
+     
+[![Solved.ac프로필](http://mazassumnida.wtf/api/generate_badge?boj=corhythm)](https://solved.ac/corhythm)
 
 ```mermaid
   journey

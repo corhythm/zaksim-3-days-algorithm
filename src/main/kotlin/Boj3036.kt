@@ -17,15 +17,23 @@ class Boj3036 {
 
     }
 
-    private fun gcd(a: Int, b: Int): Int { // great common divisor
-        var r: Int
+    /*
+     * Greater Common Divisor
+     * <유클리드 알고리즘>
+     * 임의로 나눈 두 자연수 a, b가 주어졌을 때, 둘 중 큰 값이 a라고 가정
+     * a를 b로 나눈 나머지를 n (a % b == n)
+     * n == 0이면 b가 최대 공약수(GCD)
+     * n != 0이면 a에 b를 다시 넣고, n를 b에 대입한 후 다시 step2부터 반복
+     */
+    private fun gcd(a: Int, b: Int): Int {
+        var n: Int
         var numA = a
         var numB = b
 
         while (numB != 0) {
-            r = numA % numB
+            n = numA % numB
             numA = numB
-            numB = r
+            numB = n
         }
         return numA
     }

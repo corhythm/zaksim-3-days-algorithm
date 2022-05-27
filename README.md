@@ -2,7 +2,13 @@
     zaksim-3-days-algorithm
      Hello Algorithm
      
-[![Solved.ac프로필](http://mazassumnida.wtf/api/generate_badge?boj=corhythm)](https://solved.ac/corhythm)
+<!-- [![Solved.ac프로필](http://mazassumnida.wtf/api/generate_badge?boj=corhythm)](https://solved.ac/corhythm)<img src="http://mazandi.herokuapp.com/api?handle=corhythm&theme=warm"/> -->
+
+<div style="display: flex; justify-content: space-between; width: 100%;;">
+  <img src="http://mazandi.herokuapp.com/api?handle=corhythm&theme=warm"/>
+  <img src="http://mazassumnida.wtf/api/generate_badge?boj=corhythm"/>
+</div>
+    
 
 ```mermaid
   journey

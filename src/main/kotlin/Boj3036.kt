@@ -18,8 +18,8 @@ class Boj3036 {
     }
 
     /*
-     * Greater Common Divisor
-     * <유클리드 알고리즘>
+     * Greatest Common Divisor
+     * <Euclidean algorithm>
      * 임의로 나눈 두 자연수 a, b가 주어졌을 때, 둘 중 큰 값이 a라고 가정
      * a를 b로 나눈 나머지를 n (a % b == n)
      * n == 0이면 b가 최대 공약수(GCD)

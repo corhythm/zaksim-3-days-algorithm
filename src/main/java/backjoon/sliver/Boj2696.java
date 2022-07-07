@@ -1,3 +1,5 @@
+package backjoon.sliver;
+
 import java.util.Scanner;
 
 // 백준에 제출할 때는 Main으로 class 명을 바꾸서 제출해야 함

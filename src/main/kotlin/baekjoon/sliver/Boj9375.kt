@@ -5,40 +5,40 @@ import java.util.StringTokenizer
 class Boj9375 {
 
     fun solve() {
-        val testCase = StringTokenizer(readln()).nextToken().toInt()
+        val testCase = readln().toInt()
         repeat(testCase) {
 
-            val clothesNum = StringTokenizer(readln()).nextToken().toInt()
-            val set = hashSetOf<String>()
+            val clothesNum = readln().toInt()
+            val clothesMap = hashMapOf<String, Int>()
+
             repeat(clothesNum) {
-                val st = StringTokenizer(readln())
-                val clothesName = st.nextToken()
-                val clothesType = st.nextToken()
 
-                set.add(clothesType)
+                val tokenizer = StringTokenizer(readln())
+                tokenizer.nextToken() // clothesName
+                val clothesType = tokenizer.nextToken()
+
+                if (clothesMap.containsKey(clothesType)) {
+                    clothesMap[clothesType] = clothesMap[clothesType]!!.plus(1)
+                } else {
+                    clothesMap[clothesType] = 1
+                }
             }
 
-            val caseNum = combination(clothesNum, set.size)
-            println(caseNum)
-        }
-
-    }
-
-    private fun combination(n: Int, until: Int): Int {
-        var count = 0
-        for (i in 1..until) {
-            var result = factorial(n).div(factorial(i).times(factorial(n.minus(i))))
-            if (i != 1 && n != until) {
-                result /= 2
+            var result = 1
+            clothesMap.values.forEach {
+                result *= (it + 1)
             }
-            println("$i: $result")
-            count += result
+            println(result - 1)
+
+
         }
-        return count
     }
 
-    private tailrec fun factorial(n: Int, result: Int = 1): Int =
-        if (n <= 0) result else factorial(n.minus(1), result * n)
+
+//    private fun combination(n: Int, k: Int) = factorial(n) / (factorial(k) * factorial(n - k))
+//
+//    private tailrec fun factorial(n: Int, result: Int = 1): Int =
+//        if (n <= 0) result else factorial(n.minus(1), result * n)
 }
 
 fun main() = Boj9375().solve()

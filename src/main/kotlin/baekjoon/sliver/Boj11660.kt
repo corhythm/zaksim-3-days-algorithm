@@ -35,7 +35,7 @@ class Boj11660 {
     }
 
     private fun calculateIntervalSum(x1: Int, y1: Int, x2: Int, y2: Int): Int {
-        var sum = 0;
+        var sum = 0
 
         for (i in y1..y2) {
             for (j in x1..x2) {
@@ -43,7 +43,7 @@ class Boj11660 {
             }
         }
 
-        return sum;
+        return sum
     }
 }
 

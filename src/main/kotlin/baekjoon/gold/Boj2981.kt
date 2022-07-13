@@ -4,44 +4,14 @@ import java.util.*
 
 class Boj2981 {
 
-    fun run() = with(Scanner(System.`in`)) {
-        val num = nextInt()
-        val list = arrayListOf<Int>()
-        val availableDivisors = arrayListOf<Int>()
+    fun solve() {
+        val N = readln().toInt()
+        val nums = arrayListOf<Int>()
 
-        for (i in 0 until num) {
-            list.add(nextInt())
+        repeat(N) {
+            val tokenizer = StringTokenizer(readln())
+            nums.add(tokenizer.nextToken().toInt())
         }
-
-        var commonDivisor = -1
-
-        run findDivisor@ {
-            for (i in 0 until list.size.minus(1)) {
-                val gcd = gcd(list[i], list[i.plus(1)])
-                for (j in list.indices) {
-                    if (list[j] % gcd != 0) break
-                    if (j == list.size.minus(1)) {
-                        commonDivisor = gcd
-                        return@findDivisor
-                    }
-                }
-            }
-        }
-
-        print("$commonDivisor ")
-        var i = 0
-        commonDivisor *= 2
-        while (true) {
-            if (list[i] % commonDivisor != 0) break
-
-            if (i == list.size.minus(1)) {
-                println(" $commonDivisor")
-                commonDivisor *= 2
-                i = 0
-            }
-        }
-
-
 
     }
 
@@ -59,4 +29,4 @@ class Boj2981 {
     }
 }
 
-fun main() = Boj2981().run()
+fun main() = Boj2981().solve()

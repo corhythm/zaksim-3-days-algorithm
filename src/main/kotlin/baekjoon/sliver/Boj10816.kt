@@ -55,9 +55,8 @@ class Boj10816 {
         while (firstIndex < lastIndex) {
             val mid = (firstIndex + lastIndex) / 2 // 중간 위치를 구하고
 
-            // key 값이 중간 위치의 값보다 작을 경우 (중복 원소에 대해 왼쪽으로 탐색하도록 상한을 내린다)
-            if (key <= arr[mid]) {
-                lastIndex = mid
+            if (key <= arr[mid]) { // key 값이 중간 위치의 값보다 같거나 작을 경우
+                lastIndex = mid // 중복 원소에 대해 왼쪽으로 탐색하도록 상한을 내린다.
             } else {
                 firstIndex = mid + 1
             }
@@ -68,7 +67,7 @@ class Boj10816 {
 
     private fun upperBound(arr: IntArray, key: Int): Int {
         var firstIndex = 0
-        var lastIndex = arr.size
+        var lastIndex = arr.size // 배열 길이에 -1을 해주지 않는 이유는
 
         // firstIndex랑 lastIndex가 같아질 때까지 반복
         while (firstIndex < lastIndex) {

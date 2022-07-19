@@ -43,8 +43,6 @@ class Boj1654 {
             }
         }
 
-        println("min=$min, max=$max")
-
         val bw = BufferedWriter(OutputStreamWriter(System.out))
         bw.write("${min.minus(1)}\n")
         bw.flush()

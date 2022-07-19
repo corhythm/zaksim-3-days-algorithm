@@ -31,9 +31,7 @@ class Boj1920 {
         val N = readln().toInt()
         val A = IntArray(N)
         var tokenizer = StringTokenizer(readln())
-        for (i in 0 until N) {
-            A[i] = tokenizer.nextToken().toInt()
-        }
+        repeat(N) { A[it] = tokenizer.nextToken().toInt() }
         A.sort()
 
         val M = readln().toInt()
@@ -51,7 +49,7 @@ class Boj1920 {
         bw.close()
     }
 
-    fun binarySearch(arr: IntArray, key: Int): Int {
+    private fun binarySearch(arr: IntArray, key: Int): Int {
         var firstIndex = 0 // 탐색 범위의 왼쪽 끝 인덱스
         var lastIndex = arr.size.minus(1) // 탐색 범위의 오른쪽 끝 인덱스
 

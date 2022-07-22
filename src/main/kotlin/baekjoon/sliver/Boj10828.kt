@@ -2,7 +2,7 @@ package baekjoon.sliver
 
 import java.util.StringTokenizer
 
-class Boj18258 {
+class Boj10828 {
 
     fun solve() {
 
@@ -44,4 +44,4 @@ class Boj18258 {
     }
 }
 
-fun main() = Boj18258().solve()
+fun main() = Boj10828().solve()
